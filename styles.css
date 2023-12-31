@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --mainBg: hsl(216, 12%, 8%);
+    --orangeRate: hsl(25, 97%, 53%);
+    --whiteHeader: hsl(0, 0%, 100%);
+    --cardBg: linear-gradient(0deg, #171E28 0%, #1F2630 100%);
+    --lighGray: hsl(217, 12%, 63%);
+    --paragraphSize: 14px;
+    --buttonRating: #262F39;
+    --font: 'Overpass', sans-serif;
+}
+body{
+    background-color: var(--mainBg);
+    font-family: var(--font);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.rating-Card{
+    background: var(--cardBg);
+    width: 100%;
+    display: grid;
+    gap: 30px;
+    padding: 1rem;
+    border-radius: 20px 
+}
+.head-section{
+    display: grid;
+    gap: 20px;
+    margin-top: 5px;
+}
+picture{
+    background-color: var(--buttonRating);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.description-text{
+    display: grid;
+    gap: 15px;
+}
+.description-text h1{
+    color: var(--whiteHeader);
+    font-size: 1.5rem;
+}
+.description-text p{
+    color: var(--lighGray);
+    font-size: var(--paragraphSize);
+}
+.rating-section{
+    display: grid;
+    gap: 20px;
+    margin-bottom: 5px 
+}
+.rating-section div{
+    display: flex;
+    justify-content: space-between;
+}
+.rating-section div button{
+    width: 40px;
+    height: 40px;
+    background-color: var(--buttonRating);
+    color: var(--lighGray);
+    border: none;
+    border-radius: 100%;
+    font-family: var(--font);
+}
+.rating-section div button:hover{
+    background-color: var(--orangeRate);
+    color: var(--whiteHeader);
+    cursor: pointer;
+}
+.rating-section input{
+    background-color: var(--orangeRate);
+    color: var(--whiteHeader);
+    border: none;
+    border-radius: 30px;
+    height: 40px;
+    font-weight: 700;
+}
+.rating-section input:hover{
+    background-color: var(--whiteHeader);
+    color: var(--orangeRate);
+    cursor: pointer;
+}
+
+.results-card{
+    background: var(--cardBg);
+    display: grid;
+    gap: 20px;
+    place-items: center;
+    padding: 1rem;
+    border-radius: 20px;
+    display: none;
+}
+.results-card div{
+    display: grid;
+    gap: 30px;
+}
+.results-card div span{
+    color: var(--orangeRate);
+    background-color: var(--buttonRating);
+    width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: var(--paragraphSize);
+}
+.results-card section{
+    text-align: center;
+    display: grid;
+    gap: 15px;
+}
+.results-card section h1{
+    font-size: 1.5rem;
+    color: var(--whiteHeader);
+}
+.results-card section p{
+    color: var(--lighGray);
+    font-size: var(--paragraphSize);
+}
+
+
+
+@media(min-width:375px){
+    .rating-Card{
+        width: 320px;
+    }
+    .results-card{
+    width: 320px;}
+}
